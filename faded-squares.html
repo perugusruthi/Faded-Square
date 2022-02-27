@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Faded Squares</title>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,700,600,800' rel='stylesheet' type='text/css'>
+
+<style>
+body{font-family: 'Open Sans', sans-serif;}
+.main{ width: 792px; height: 750px; margin:0 auto;}
+.main h3{text-align:center; text-transform: uppercase; font-size: 15px; padding-top: 26px;}
+.main span{padding:5px;}
+ 
+ .fade1, .fade2, .fade3, .fade7, .fade8 {
+    background: #66CCFF;
+	margin: 12px;
+    width: 220px;
+    display: none;
+    height: 150px;
+    float: left;
+	position: relative; 
+	box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.15);
+	padding: 10px;
+	}
+.fade4, .fade5, .fade6 {
+    background: #66CCFF;
+	margin: 12px;
+    width: 220px;
+    display: none;
+    height: 150px;
+    float: right;
+	position: relative;
+	box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.15);	
+	padding: 10px;
+  }
+
+ .fade1:after, .fade2:after, .fade7:after {
+	left: 100%;
+	top: 70%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	z-index: 1;
+	pointer-events: none;
+    border: 1.25em solid #66CCFF;
+    border-color: transparent transparent #66CCFF #66CCFF;
+    transform-origin: 0 0;
+    transform: rotate(-135deg);
+    box-shadow:-2px 2px 3px 0 rgba(0, 0, 0, 0.15);
+  }
+
+.fade3:after, .fade6:after {
+	left: 37%;
+	top: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	z-index: 1;
+	pointer-events: none;
+    border: 1.25em solid #66CCFF;
+    border-color: transparent transparent #66CCFF #66CCFF;
+    transform-origin: 0 0;
+    transform: rotate(-45deg);
+    box-shadow:-2px 2px 3px 0 rgba(0, 0, 0, 0.15);
+}
+.fade4:after, .fade5:after {
+	left: 1%;
+	top: 32%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	z-index: 1;
+	pointer-events: none;
+    border: 1.25em solid #66CCFF;
+    border-color: transparent transparent #66CCFF #66CCFF;
+    transform-origin: 0 0;
+    transform: rotate(45deg);
+    box-shadow:-2px 3px 3px 0 rgba(0, 0, 0, 0.15);
+}
+.fade8:after {
+	left: 61%;
+	top: 1%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	z-index: 1;
+	pointer-events: none;
+    border: 1.25em solid #66CCFF;
+    border-color: transparent transparent #66CCFF #66CCFF;
+    transform-origin: 0 0;
+    transform: rotate(135deg);
+    box-shadow:-2px 2px 3px 0 rgba(0, 0, 0, 0.15);
+}
+	  
+ 
+</style>
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<!-- <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/> -->
+<div class="main">
+	<div class="fade1"><span>1</span><h3>Contract</h3></div>
+	<div class="fade2"><span>2</span><h3>Pre-Evaluation</h3></div>
+	<div class="fade3"><span>3</span><h3>Management Meeting</h3></div>
+	<div class="fade4"><span>4</span><h3>Analysis</h3></div>
+	<div class="fade5"><span>5</span><h3>Rating Committee</h3></div>
+	<div class="fade6"><span>6</span><h3>Notification</h3></div>
+	<div class="fade7"><span>7</span><h3>Publication</h3></div>
+	<div class="fade8"><span>8</span><h3>Surveillance of Rated Issuers & Issues</h3></div>
+</div>
+<script>
+$(document).ready(function(){
+		$(".fade1").hide().delay(600).fadeIn(1000);
+		$(".fade2").hide().delay(1200).fadeIn(3000);
+		$(".fade3").hide().delay(1800).fadeIn(3000);
+		$(".fade4").hide().delay(2400).fadeIn(3000);
+		$(".fade5").hide().delay(3000).fadeIn(3000);
+		$(".fade6").hide().delay(3600).fadeIn(3000);
+		$(".fade7").hide().delay(4200).fadeIn(3000);
+		$(".fade8").hide().delay(4800).fadeIn(3000);
+  });
+</script> 
+</body>
+</html>
+
